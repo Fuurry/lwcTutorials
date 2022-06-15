@@ -1,0 +1,37 @@
+<template>
+
+    <!-- Creating a simple Caluculator component -->
+    <lightning-card title="Simple Calculator" > 
+        <div class="slds-var-m-around_small">
+            <lightning-input type="text" label="Input #1" name = "input1" onchange={handleOnchange}></lightning-input>
+        </div>
+        <div class="slds-var-m-around_small">
+            <lightning-input type="text" label="Input #2"  name = "input2" onchange={handleOnchange}></lightning-input>
+        </div>
+        <div class="slds-var-m-around_small">
+            <!-- Button for addition -->
+
+            <lightning-button variant="brand" label="Add" title="Primary action" name = "add" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+
+
+            <!-- Button for substraction -->
+
+            <lightning-button variant="brand" label="Subtract" title="Primary action" name = "sub" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+
+            <!-- Button for multiplication -->
+
+            <lightning-button variant="brand" label="Multiply" title="Primary action" name = "mul" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+            <!-- Button for Division -->
+
+            <lightning-button variant="brand" label="Division" title="Primary action" name = "div" onclick={handleClick} class="slds-var-m-left_x-small"></lightning-button>
+
+        </div>
+
+        <div class="slds-var-m-around_small">
+            <p>
+                output = {output}
+            </p>
+        </div>
+    </lightning-card>
+
+</template>
