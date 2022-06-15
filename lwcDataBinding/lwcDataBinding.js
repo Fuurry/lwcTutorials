@@ -5,6 +5,7 @@ export default class LwcDataBinding extends LightningElement {
 
     // *************************** one way data binding ***********************************
     // while declaring the variable inside the js class no need to use let , const , var;
+    // variable inside the class is called property
     firstName = "Rathee";
 
     // creating a object and binding it in template
