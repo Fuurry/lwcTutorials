@@ -1,0 +1,46 @@
+<template>
+    
+    <!-- ******************** Testing Reactive Property **************************** -->
+
+    <lightning-card title="Testing Reactive Propery">
+        <div>
+            <lightning-button label='Change Name' onclick = {handleClick}></lightning-button>
+
+        </div>
+        <h2>
+            {userName} 
+        </h2>
+        <div>
+            <lightning-button label='Change Name for Object' onclick = {handleClickObject}></lightning-button>
+
+        </div>
+        <h2>
+            {employee.name} 
+        </h2>
+    </lightning-card>
+
+    <!-- ***** Condition Rendering **************** -->
+
+    <lightning-card title="Conditional Rendering">
+        <template if:true={isTrue}>
+            content 1
+        </template>
+        <template if:false={isTrue}>
+            content2
+        </template>
+
+        <lightning-button label="click me" variant = "brand" onclick = {handleClickConditional}></lightning-button>
+    </lightning-card>
+
+    <!-- ***** Template looping **************** -->
+
+    <lightning-card title="Template Looping">
+        <template for:each={personInfo} for:item="person">
+            <div key = {person.id}>
+                {person.name}
+                {person.age}
+            </div>
+        </template>
+    </lightning-card>
+
+</template>
