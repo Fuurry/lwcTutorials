@@ -1,0 +1,47 @@
+<template>
+    
+    <!-- All the  css class is applied from the SLDS-->
+    <!-- Kebab case should be used in Html component of LWC -->
+    <!-- ************************************** One Way DataBinding  ******************************  -->
+    <lightning-card title="Data Binding">
+       
+       <p class="slds-var-m-around_medium slds-border_bottom">
+        <!-- Binding a simple variable from javascript -->
+        <!-- &nbsp is used for providing the space -->
+            Welcome &nbsp; {firstName}
+
+       </p>
+
+        <p class="slds-var-m-around_medium slds-border_bottom">
+
+            <!-- Binding object data from Javascript -->
+            Welcome Mr. {person.name} <br>
+            Position : {person.position} <br>
+            Age : {person.age}<br>
+            Address : {person.address.city} &nbsp; , {person.address.District} &nbsp; , {person.address.Zip}
+                
+            
+
+        </p>
+
+        <p class="slds-var-m-around_medium slds-border_bottom">
+            <!-- Binding the array data into template -->
+
+            fruiit at 0 index is &nbsp; {fruitAtIndexZero}
+            <!-- binding the getter method in template -->
+        </p>
+    </lightning-card>
+
+
+    <!-- ************************************** Two Way DataBinding  ******************************  -->
+
+    <lightning-card>
+        <div class="slds-var-m-around_medium slds-border_bottom">
+            <!-- we want event handler for two way dataBinding -->
+            <lightning-input name = "txtFirstName" label="Enter the Name" onchange={handleChange}></lightning-input>
+            First Name : {firstName}
+        </div>
+        
+    </lightning-card>
+    
+</template>
