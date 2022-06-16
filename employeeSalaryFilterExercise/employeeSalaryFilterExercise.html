@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Salary Filter Exercise">
+        <div class="slds-border_bottom slds-var-m-around_x-small">
+            <lightning-input name = "input" label="Salary Filter" onchange={handleChange}></lightning-input>
+        </div>
+        <div class="slds-border_bottom slds-var-m-around_x-small">
+            <template for:each={filterEmployee} for:item="emp">
+                <div key={emp.name} class="slds-border_bottom slds-var-m-around_x-small">
+                    {emp.name} &nbsp;
+                    {emp.position} &nbsp;
+                    {emp.Salary}
+
+                </div>
+            </template>
+        </div>
+
+        
+    </lightning-card>
+</template>
