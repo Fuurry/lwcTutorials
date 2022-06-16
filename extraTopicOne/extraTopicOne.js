@@ -65,4 +65,9 @@ export default class ExtraTopicOne extends LightningElement {
             id:3
         }
     ]
+
+
+    // template iterator for the array
+
+    personArray = ["sunil" , "mohit" , "shivam" , "Rathee"];
 }

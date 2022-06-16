@@ -46,6 +46,8 @@
 
     <!-- *********** Template iterator ********************** -->
 
+
+    <!-- template iterator for the array -->
     <lightning-card title="Template iterator">
 
         <!-- It is a type of template looping   -->
@@ -68,6 +70,28 @@
             </div>
         </template>
 
+    </lightning-card>
+
+
+    <!-- Template iterator for array -->
+
+    <lightning-card title="Template iterator for Array">
+
+        <!-- iterator name person , cotainer {personArray} -->
+        <template iterator:person ={personArray}>
+            <!-- person.value for array  -->
+            <div key={person.value}>
+                <template if:true={person.first}>
+                    {person.value}
+                </template>
+                <template if:false={person.last}>
+                    <h3>
+                        {person.value}
+                    </h3>
+                </template>
+                
+            </div>
+        </template>
     </lightning-card>
 
 </template>
