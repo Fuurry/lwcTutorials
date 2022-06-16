@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="Check Stock">
+        <div class="slds-var-m-around_xx-small">
+            <lightning-input name="product" label ="Get Stock" onchange={handleChange}></lightning-input>
+        </div>
+
+        <div class="slds-var-m-around_xx-small">
+            <template if:true={boolenVar}>
+                <p class="slds-border_bottom">
+                    {productDetails.name}
+                </p>
+                <p class="slds-border_bottom">
+
+                {productDetails.price}
+                </p>
+                <p class="slds-border_bottom">
+                    {productDetails.stock}
+                </p>
+            </template>
+
+            <template if:false={boolenVar}>
+                <p class="slds-border_bottom">
+                    {productDetails.name}
+                </p>
+                <p class="slds-border_bottom">
+
+                {productDetails.price}
+                </p>
+                <p class="slds-border_bottom">
+                    {productDetails.stock}
+                </p>
+                
+                
+            </template>
+        </div>
+    </lightning-card>
+</template>
