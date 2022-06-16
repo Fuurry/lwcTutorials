@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="Query Selector Demo">
+
+        <lightning-input label = "Name" class  = "fname"></lightning-input>
+
+        <p>
+            paragraph 1
+        </p>
+        <p>
+            paragraph 2
+        </p>
+
+        <p style="background-color: blue">
+            paragraph 3
+        </p>
+        <!-- all native element should be lwc:dom="manual" if we donot define lwc:dom="manual then css will not be applied
+        and DOM will not be applied at run time -->
+        <div class="dynamic" lwc:dom="manual">
+
+        </div>
+        <lightning-button label="Click me" onclick={handleChnage} ></lightning-button>
+
+
+
+        <!-- Data Id attribute -->
+
+        <lightning-card title="Data Attribute">
+
+            <!-- data-id can be hard coded or it can be dynamic -->
+            <!-- data-id , data-anything  here data keyword is constant-->
+            <lightning-input data-id="id1" label="Input1"></lightning-input>
+
+            <lightning-button label="click me" data-btn="btn1" onclick={handleDataClick}></lightning-button>
+
+
+        </lightning-card>
+
+
+
+    </lightning-card>
+</template>
