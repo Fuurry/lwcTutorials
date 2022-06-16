@@ -43,4 +43,31 @@
         </template>
     </lightning-card>
 
+
+    <!-- *********** Template iterator ********************** -->
+
+    <lightning-card title="Template iterator">
+
+        <!-- It is a type of template looping   -->
+        <template iterator:person={personInfo}>
+            <!-- iterator:person ____ person is the variable name -->
+            <div key={person.value.id}>
+                <!-- declaring key  -->
+                <template if:true={person.first}>
+
+                    <!-- for first item    ___   .first is predefined in lwc-->
+                    {person.value.name}
+                    {person.value.age}
+                </template>
+                <template if:true={person.last}>
+                    <!-- for last item in array  ___ .last is predefined in lwc for template iterator -->
+                    <b>{person.value.name}
+                        {person.value.age}
+                    </b>
+                </template>
+            </div>
+        </template>
+
+    </lightning-card>
+
 </template>
