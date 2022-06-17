@@ -3,10 +3,12 @@
     <!-- Creating a simple Caluculator component -->
     <lightning-card title="Simple Calculator" > 
         <div class="slds-var-m-around_small">
-            <lightning-input type="text" label="Input #1" name = "input1" onchange={handleOnchange}></lightning-input>
+
+            <!-- Adding data id attribute and using template query selector to fetch values from input fields -->
+            <lightning-input type="text" data-id="input1" label="Input #1" name = "input1" onchange={handleOnchange}></lightning-input>
         </div>
         <div class="slds-var-m-around_small">
-            <lightning-input type="text" label="Input #2"  name = "input2" onchange={handleOnchange}></lightning-input>
+            <lightning-input type="text" data-id="input2" label="Input #2"  name = "input2" onchange={handleOnchange}></lightning-input>
         </div>
         <div class="slds-var-m-around_small">
             <!-- Button for addition -->
