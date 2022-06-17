@@ -1,0 +1,51 @@
+<template>
+    
+
+    <lightning-card title="Component Communication">
+        <p>
+            Hii , this is from parent ,
+        </p>
+
+    <!-- linking child component to parent component -->
+    <!-- message is attribute here , but is defined as public property in child jsCode -->
+
+    <!-- // if property name is @api messageInfo then the syntax  that will be passed in the 
+    // parent component will be message-info -->
+
+     <!-- <c-child-component message = "message from parent"></c-child-component> -->
+    </lightning-card>
+
+
+    <!-- refering child component -->
+    <!-- 
+        child component name = employee
+        syntax <c-employee>
+
+
+        child component name = employeeData
+        syntax <c-employee-data>
+
+        child component name = employeeDataInfo
+        syntax <c-employee-data-info>  
+
+        When capital letter comes in the Child Component name then it should be preffix with - and capital letter 
+        should be changed to small case
+     -->
+
+     <lightning-card title="Looping through array in Child">
+
+        <template for:each={employeeInfo} for:item="employee">
+            <div key ={employee.id}>
+
+                <c-child-component employee ={employee}></c-child-component>
+            </div>
+        </template>
+
+        
+
+     </lightning-card>
+
+
+
+
+</template>
